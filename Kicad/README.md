@@ -24,3 +24,5 @@
 |1    |Conn edge female 86p|CN1                              |ECC43DCAI-S189      | from ebay or digikey ECC43DCAI-S189 |
 |2    |Pin strip 1x3 male  |JP1  JP2                         |G800LR305018EU      |                                |
 
+
+[Mouser project](https://www.mouser.it/Tools/Project/Share?AccessId=fd1a780ce9&_gl=1*6f9jub*_ga*MTc4OTQzODA0MS4xNzM4OTM5MTkw*_ga_15W4STQT4T*MTczODkzOTE4OS4xLjAuMTczODkzOTE5My41Ni4wLjA.)
