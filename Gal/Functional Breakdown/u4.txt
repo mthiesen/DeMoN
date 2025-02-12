@@ -1,0 +1,87 @@
+Inputs:
+
+1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 14, 15, 16, 17, 18
+
+Outputs:
+
+12 (Combinatorial, Output feedback output, Active low)
+13 (Combinatorial, Output feedback output, Active low)
+14 (Combinatorial, Output feedback output, Active low)
+15 (Combinatorial, Output feedback output, Active low)
+16 (Combinatorial, Output feedback output, Active low)
+17 (Combinatorial, Output feedback output, Active low)
+18 (Combinatorial, Output feedback output, Active low)
+19 (Combinatorial, Output feedback output, Active low)
+
+Equations:
+
+
+i1 = O19 on U2
+i2 = O13 on U2
+i3= O12  on U2
+
+i4 = freeze cause bit 0
+i5 = freeze cause bit 1
+i11 = ar executing in rom
+
+i1 i2 i3
+0  0  0  = 40000x
+1  0  0  = bfe001
+0  1  0  = bfd100
+1  1  0  = 000000
+0  0  1  = dffxxx
+1  0  1  = 44xxxx
+0  1  1  = 40xxxx
+1  1  1  = other
+
+
+40xxxx
+/o12(u7 rom ce) = /i1 & i2 & i3 & /as & /lds & /i11
+o12.oe = vcc
+
+40000x set bfd100 triggering
+/o13 = /i1 & /i2 & /i3 & oe & /as & /i11 & o17(D0) +
+       i11 & /o13 +
+       i2 & /o13 +
+       i1 & /o13 +
+       i3 & /o13 +
+       /oe & /o13 +
+       as & /o13
+o13.oe = vcc
+
+40000x set bfe001 triggering
+/o14 = /i1 & /i2 & /i3 & oe & /as & /i11 & o18(D1) +
+       i11 & /o14 +
+       i2 & /o14 +
+       i1 & /o14 +
+       i3 & /o14 +
+       /oe & /o14 +
+       as & /o14
+o14.oe = vcc
+
+40xxxx
+/o15(u9 rom ce) = /i1 & i2 & i3 & /as & /uds & /i11
+o15.oe = vcc
+
+dffxxx
+/o16(ram u8 ce) = /i1 & /i2 & i3 & oe & /as & /lds +
+bfd100
+       i1 & /i2 & i3 & /as & /lds & /i11
+o16.oe = vcc
+
+read from 400000-1
+/o17(d0) = /i4
+40000x
+o17.oe = /i1 & /i2 & /i3 & /oe & /as & /i11
+
+read from 400000-1
+/o18(d1) = /i5
+40000x
+o18.oe = /i1 & /i2 & /i3 & /oe & /as & /i11
+
+dffxxx
+/o19(ram u10 ce) = /i1 & /i2 & i3 & oe & /as & /uds +
+bfd100
+       i1 & /i2 & i3 & /as & /uds & /i11
+o19.oe = vcc
+

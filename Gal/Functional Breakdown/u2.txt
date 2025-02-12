@@ -1,0 +1,91 @@
+Inputs:
+
+1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 14, 15, 16, 17, 18
+
+Outputs:
+
+12 (Combinatorial, Output feedback output, Active low)
+13 (Combinatorial, Output feedback output, Active low)
+14 (Combinatorial, Output feedback output, Active low)
+19 (Combinatorial, Output feedback output, Active low)
+
+Equations:
+
+i16 = 19 on U1
+i17 = 18 on U1
+i18 = 12 on U1
+
+16 17 18
+ 0  1  1 = 0000xx
+ 1  1  0 = 40xxxx
+ 0  1  0 = BFD10x
+ 0  0  1 = BFE00x
+ 1  0  1 = 44xxxx
+ 1  0  0 = DFFxxx
+ 0  0  0 = 4000xx
+ 1  1  1 =
+
+i9 = bfe001 triggering enabled
+i8=  bfd100 triggering enabled
+ 
+400000   0      0     0     0     0     0     0     0     0      0
+/o12 = /A8 & /A7 & /A6 & /A5 & /A4 & /A3 & /A2 & /i16 & /i17 & /i18 +
+
+BFE000   0           0      0    1
+       /A8 & /i9 & /i16 & /i17 & i18 +
+
+BFD100   1          0       1     0
+       A8 & /i8 & /i16 & i17 & /i18 +
+
+0000000  0      0    0    0     0     0    0      0     1    1
+       /A8 & /A7 & /A6 & /A5 & /A4 & A3 & /A2 & /i16 & i17 & i18
+o12.oe = vcc
+
+
+400000   0     0     0    0     0     0     0     0      0        0
+/o13 = /A8 & /A7 & /A6 & /A5 & /A4 & /A3 & /A2 & /i16 & /i17 & /i18 +
+
+BFE000  0            0     0      1
+       /A8 & /i9 & /i16 & /i17 & i18 +
+
+DFFxxx   1    0      0
+       i16 & /i17 & /i18 +
+
+44xxxx  1      0    1
+       i16 & /i17 & i18
+o13.oe = vcc
+
+4000xx  0       0      0
+/o19 = /i16 & /i17 & /i18 +
+
+BFD100 1           0     1     0
+       A8 & /i8 & /i16 & i17 & /i18 +
+
+DFFxxx  1      0      0
+       i16 & /i17 & /i18 +
+
+40xxxx
+        1     1     0
+       i16 & i17 & /i18
+o19.oe = vcc
+
+
+
+
+        xxxxxE
+
+        1    1          1   x
+/o14 = A3 & A2 & FC1 & A1
+o14.oe = vcc
+
+
+12 13 19
+0  0  0  = 400000-1
+0  0  1  = bfe001
+0  1  0  = bfd100
+0  1  1  = 000000
+1  0  0  = dffxxx
+
+1  0  1  = 44xxxx
+1  1  0  = 40xxxx
+1  1  1  =

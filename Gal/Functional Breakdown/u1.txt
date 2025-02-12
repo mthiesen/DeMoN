@@ -1,0 +1,69 @@
+Inputs:
+
+1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 14, 15, 16, 17, 18
+
+Outputs:
+
+12 (Combinatorial, Output feedback output, Active low)
+18 (Combinatorial, Output feedback output, Active low)
+19 (Combinatorial, Output feedback output, Active low)
+
+Equations:
+
+1011 1111 1110
+bfe001
+1011 1111 1101
+bfd100
+
+4000    0      	1   0       0       0     0      0     0      0      0      0     0      0       0       0
+/o12 = /A23 & A22 & /A21 & /A20 & /A19 & /A18 & /A17 & /A16 & /A15 & /A14 & /A13 &/A12 & /A11 & /A10 & /A9 +
+
+BFD1    1    0       1    x   x   x   x   x   x   x         0   x     0     0      0
+       A23 & /A22 & A21   x20 x19 x18 x17 x16 x15 x14   & /A13 x12 & /A11 & /A10 & /A9 +
+
+DFF0    1    1      0      1     1     1    1     1     1     1    1     1      0      0      0
+       A23 & A22 & /A21 & A20 & A19 & A18 &A17 & A16 & A15 & A14 & A13 & A12 & /A11 & /A10 & /A9 +
+
+40xx    0     1       0     0      0       0  x   x   x   x   x   x   x   x   x
+       /A23 & A22 & /A21 & /A20 & /A19 & /A18 x17 x16 x15 x14 x13 x12 x11 x10 x9
+			 
+o12.oe = vcc
+
+4000    0      	1   0       0       0     0      0     0      0      0      0     0      0       0       0
+/o18 = /A23 & A22 & /A21 & /A20 & /A19 & /A18 & /A17 & /A16 & /A15 & /A14 & /A13 & /A12 & /A10 & /A9 & /A11    +
+
+BFE0    1    0       1    x   x   x   x   x   x   x   x     0      0     0      0
+       A23 & /A22 & A21 & x20 x19 x18 x17 x16 x15 x14 x13 /A12 & /A11 & /A10 & /A9  +
+
+DFF0    1    1      0      1     1     1    1     1     1     1    1     1      0      0      0
+       A23 & A22 & /A21 & A20 & A19 & A18 & A17 & A16 & A15 & A14 & A13 & A12 & /A11 & /A10 & /A9     +
+
+44xx    0     1       0     0      0       1  x   x   x   x   x   x   x   x   x
+       /A23 & A22 & /A21 & /A20 & /A19 & A18 x17 x16 x15 x14 x13 x12 x11 x10 x9
+o18.oe = vcc
+
+
+4000    0      	1   0       0       0     0      0     0      0      0      0     0      0       0       0
+/o19 = /A23 & A22 & /A21 & /A20 & /A19 & /A18 & /A17 & /A16 & /A15 & /A14 & /A13 & /A12 & /A11& /A10 & /A9 +
+
+BFE0    1    0       1    x   x   x   x   x   x   x   x     0      0     0      0
+       A23 & /A22 & A21 & x20 x19 x18 x17 x16 x15 x14 x13 /A12 & /A11 & /A10 & /A9  +
+
+BFD0    1    0       1    x   x   x   x   x   x   x   0     x      0     0      0
+       A23 & /A22 & A21 & x20 x19 x18 x17 x16 x15 x14 /A13 x12 & /A11 & /A10 & /A9   +
+
+0000    0      	0     0     0      0      0      0      0      0      0      0      0      0       0     0
+
+       /A23 & /A22 & /A21 & /A20 & /A19 & /A18 & /A17 & /A16 & /A15 & /A14 & /A13 & /A12 & /A11 & /A10 & /A9 
+o19.oe = vcc
+
+12 18 19
+ 
+ 1  1  0 = 0000xx
+ 0  1  1 = 40xxxx
+ 0  1  0 = BFD10x
+ 1  0  0 = BFE00x
+ 1  0  1 = 44xxxx
+ 0  0  1 = DFFxxx
+ 0  0  0 = 4000xx
+ 1  1  1 = 

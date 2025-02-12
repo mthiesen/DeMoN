@@ -1,0 +1,86 @@
+Inputs:
+
+1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 14, 15, 16, 17, 18
+
+Outputs:
+
+13 (Combinatorial, Output feedback output, Active low)
+15 (Combinatorial, Output feedback output, Active low)
+16 (Combinatorial, Output feedback output, Active low)
+17 (Combinatorial, Output feedback output, Active low)
+18 (Combinatorial, Output feedback output, Active low)
+
+i1 = O19 on U2
+i2 = O13 on U2
+i3= O12  on U2
+
+i5 = /rst & /hlt
+i8 = exe address = xxxxE
+i6 = nmi button
+
+i1 i2 i3
+0  0  0  = 40000x
+1  0  0  = bfe001
+0  1  0  = bfd100
+1  1  0  = 000000
+0  0  1  = dffxxx
+1  0  1  = 44xxxx
+0  1  1  = 40xxxx
+1  1  1  = other
+
+Equations:
+
+NOT USED
+/o13 = /o15 +
+       i5 & /o13
+o13.oe = vcc
+
+(trigger)
+/o15 = /i6 & o16 + (nmi and not currently running)
+bfe001 (read from bfe001 and not running)
+       i1 & /i2 & /i3 & /oe & /lds & /as & o16 +
+bfd100 (write to bfd100 and not running)
+       /i1 & i2 & /i3 & /uds & oe & /as & o16 +
+000000 (access address 0 after reset and not running)
+       i1 & i2 & /i3 & o13 & /as & o16 +
+
+     keep triggering while already triggered reading code and not halt or reset
+       i5 & /fc0 & /o15 +
+			 
+		 keep triggering while already triggered and exe address <> xxxxE  not halt or reset
+       i5 & i8 & /o15 +
+
+     keep triggering while already triggered and as high and not halt or reset
+       i5 & as & /o15
+o15.oe = vcc
+
+(ar running flag)
+/o16 = /o15 +
+       already set, not halt or reset and reading 40xxxx
+       /i1 & i2 & i3 & i5 & /o16 +
+       already set, not AS and not reset or halt
+       i5 & as & /o16 +
+			 already triggeredm not halt or reset and reading data
+       i5 & fc0 & /o16
+o16.oe = vcc
+
+freeze cause bit 0
+			bfe001 read
+/o17 = i1 & /i2 & /i3 & /oe & /lds & /as & o16 +
+
+    nmi
+    	 /i6 & o16 +
+			 keep set while running
+       /o16 & /o17
+o17.oe = vcc
+
+freeze cause bit 1
+		bfd100 write
+/o18 = /i1 & i2 & /i3 & /uds & oe & /as & o16 +
+
+    nmi
+       /i6 & o16 +
+			 keep set while running
+       /o16 & /o18
+o18.oe = vcc
+
