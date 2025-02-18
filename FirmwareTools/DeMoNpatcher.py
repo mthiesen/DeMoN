@@ -2,8 +2,9 @@
 
 # Name: DeMoNpatcher.py
 # Author: gerbil
-# Version: 0.2 - 20250208
+# Version: 0.3 - 20250218
 # Description: Patches the original Action Replay 3 binary ROM to be used with DeMoN.
+#              First four bytes are ignored as they can differ with different ROMs.
 #              Note: The version of Action Replay 3 ROM MUST be version 3.17 (12/17/91)
 
 
@@ -19,6 +20,16 @@ def patch_files(AR3file, DeMoNpatch, key):
     
     try:
         with open(AR3file, "rb") as f1, open(DeMoNpatch, "rb") as f2, open(patch_filename, "wb") as out:
+            
+            # Copy the first 4 bytes of AR3file to the output file, thus not changing.
+            out.write(f1.read(4))
+
+            # Skip the first 4 bytes of both input files.
+            f1.seek(4)
+            f2.seek(4)
+
+            
+            # Now do XOR operation on the rest of the file. 
             while True:
                 byte1 = f1.read(1)
                 byte2 = f2.read(1)
