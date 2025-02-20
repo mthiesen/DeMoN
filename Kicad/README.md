@@ -5,7 +5,7 @@
 |1    |Resistor 4.7K       |R5                               |CRCW12064K70FKEA    |                               |
 |1    |Resistor 220R       |R8                               |CRCW1206220RFKEA    |                               |
 |1    |Cap. 10uF 16V       |C1                               |EEA-FC1E100H        |                               |
-|4    |Cap. 100nf          |C2-C5                            |C1206C104K5RAC7867  |                               |
+|8    |Cap. 100nf          |C2-C5, C7-C10                    |C1206C104K5RAC7867  |                               |
 |1    |Cap. 1uF 63V        |C6                               |ESS105M050AB2AA     |                               |
 |5    |GAL16V8             |U1-U5                            |ATF16V8BQL-15JU     |                               | 
 |5    |PLCC 20 POS Socket  |U1-U5                            |540-88-020-17-400-TR| Optional                      |
