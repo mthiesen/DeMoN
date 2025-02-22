@@ -6,6 +6,8 @@
 
 The DeMoN is hobby cartridge that was developed as a collaboration between three geeks who have a very healthy obsession with the Amiga, and skilled in both software and hardware development alike. It can be described as an Action Replay on steroids.
 
+![image](https://github.com/user-attachments/assets/98fd00ce-8cad-4ac1-be52-16d5208ba2aa)
+
 This project will give a brief introduction about DeMoN, how it came to be, its features and plans so that you can build your own.
 
 ## Contents
@@ -33,7 +35,7 @@ Fast forward a few years....
 
 I learnt about a project where somebody (na103) had reverse engineered the original AR3 cartridge. The project can be found [here](https://github.com/na103/ar3). I built my own, reverse engineered the firmware, added my tool and the project was a success.
 
-Shortly after this I learnt that another individual (REbEL) had reverse engineered the Action Replay III firmware, the Aktion Replay IV "firmware", and combined all the tools together into a ROM binary that worked as a "cartridge" for WinUAE (known as the Action Replay V). I got in touch to see if he wanted it working on real hardware and he agreed. We invited na103 to join us and and a collaborative hobby ensured.
+Shortly after this I learnt that another individual (REbEL) had reverse engineered the Action Replay III firmware, the Aktion Replay IV "firmware", and combined all the tools together into a ROM binary that worked as a "cartridge" for WinUAE (known as the Action Replay V). I got in touch to see if he wanted it working on real hardware and he agreed. We invited na103 to join us and and a collaborative hobby ensued.
 
 Firmware evolved as extra tools were added which led the hardware to evolve too. And as the hardware evolved, so did the firmware.
 
@@ -63,16 +65,17 @@ Other features of the DeMoN cartridge:
 * **DeMoN Detection** - The user has the option whether the DeMoN can be "seen" by the Amiga, peripherals etc. **IMPORTANT! Don't toggle this jumper whilst powered on!**
 * **DeMoN Ability** - DeMoN has the option to be "On" or "Off". **IMPORTANT! Don't toggle this jumper whilst powered on!**
 * **Keyboard Layouts** - New keyboard layouts to cater for the United Kingdom and Italian language have been added. 
-* **Serial Communication** - The DeMoN allows serial communications, but this is currently a Work In Progress. Tests have successfully sent a file from Amiga to PC, but not yet the other way. 
+* **Serial Communication** - The DeMoN allows serial communications, but this is currently a Work In Progress. Tests have successfully sent and received files between Amiga and PC. 
 * **Extra Tools** - The DeMoN cartridge contains all the commands from the Action Replay 3 cartridge and the Aktion Replay 4 software. Further to this, several bugs have been fixed. Too many to list here, but a few DeMoN specific commands that have been added are:
   * flash: Used to upgrade firmware.
   * r: This is the ramdisk. It can be accessed using R: as the drive in any of the file tools within the DeMoN console.
   * savecfg: Save your current config to the cartridge.
   * resetcfg: Set config to default.
   * axfer: Sets up the Amiga to use AmigaXfer without the need of a floppy.
+  * rfy, sfy: Send and receive files via Y-Modem (currently a Work In Progress). 
   * ...plus many, many more!
 
-For an up-to-date list of current tools and commands, see the [Complete Command List](https://github.com/dmcoles/ActionReplay5/blob/main/Complete%20Command%20List.txt).
+An up-to-date list of current tools and commands will be coming soon.
 
 
 ## Build Your Own DeMoN Cartridge.
@@ -104,18 +107,12 @@ Once built, your cartridge will now need firmware.
 This repo does not contain firmware, but it does contain a patch file that can be used to patch the original Action Replay III (version 3.17) ROM.
 Tools are included with instructions in this repo on how to patch an Action Replay III ROM file.
 
-DeMoN uses Action Replay firmware, including modified firmware and homebrews. The latest version of the DeMoN (Action Replay 5) firmware can be found on REbEL's repo that can be found [here](https://github.com/dmcoles/ActionReplay5).
-
+DeMoN uses Action Replay firmware, including modified firmware and homebrews. The latest version of the DeMoN (Action Replay 5) firmware will soon be available on REbEL's GitHub repo.
 
 ### Cartridge Case.
 The case:
 
-![image](https://github.com/user-attachments/assets/ff7e556c-8815-498d-aae7-fc6ca6019e7b) 
-
-Artist's impression of how fantastic the case can look:
-
-![image](https://github.com/user-attachments/assets/56f61f51-c88e-4a32-9cb2-2bfe68079897)
-
+![image](https://github.com/user-attachments/assets/43b0c059-f1ed-4a13-a80b-2d65ea440d6b)
 
 Basing the case on Fongo's [Action Replay 3 Replica case](https://www.printables.com/model/1037033-amiga-action-replay-3-replica-case), modifications have been made to cater for the jumpers on the DeMoN.
 
@@ -124,6 +121,6 @@ Basing the case on Fongo's [Action Replay 3 Replica case](https://www.printables
 
 **REbEL**, the author of the DeMoN firmware has an open project (Action Replay 5) that can be found here. This repo contains firmware that can be used in WinUAE as well as DeMoN. These will be up-to-date and more stable, including source code. His main github page can be found [here](https://github.com/dmcoles).
 
-**na103**, who reverse engineered the Action Replay 3, has posted his project here. This repo contains several versions of the Action Replay 3 for different ROM footprints. His main github page can be found [here](https://github.com/na103/ar3).
+**na103**, who reverse engineered the Action Replay 3, has posted his project here. This repo contains several versions of the Action Replay 3 for different ROM footprints. His main github page can be found [here](https://github.com/na103).
 
 **Fongo**, the creator of the Action Replay Replica Case. His Printables page can be found [here](https://www.printables.com/@fongo2k_2502418).
