@@ -1,37 +1,32 @@
 ![image](https://github.com/user-attachments/assets/ad882ca7-a637-47aa-bfc2-5c65c82e7dc7)
 
 
-#DeMoN
+# DeMoN
 
 
 The DeMoN is hobby cartridge that was developed as a collaboration between three geeks who have a very healthy obsession with the Amiga, and skilled in both software and hardware development alike. It can be described as an Action Replay on steroids.
 
 This project will give a brief introduction about DeMoN, how it came to be, its features and plans so that you can build your own.
 
-###A Brief History...
-In a nutshell...
+## Contents
 
-Since the 1990s I've been a massive fan of the Action Replay III cartridge (AR3) for the Amiga. Whenever I played games on the Amiga, the AR3 was always plugged in, and I had more fun finding infinite lives, infinite weapons, level skips, etc. I learnt so much from that device as well as other ways to use it.
-I wanted to have an AR3 with my own tools, but this was an impossibility for me at the time.
+[A Brief History](../history) (the boring bit. In fact, it's so boring it can be put on another page altogether).
 
-Fast forward a few years....
+[DeMoN features](../README.md#Features)
 
-I learnt about a project where somebody (na103) had reverse engineered the original AR3 cartridge. The project can be found here. I built my own, reverse engineered the firmware, added my tool and the project was a success.
+[Build Your Own](../README.md#[BuildYourOwn](../README.md#build-your-own-demon-cartridge))
 
-Shortly after this I learnt that another individual (REbEL) had reverse engineered the Action Replay III firmware, the Aktion Replay IV "firmware", and combined all the tools together into a ROM binary that worked as a "cartridge" for WinUAE (known as the Action Replay V). I got in touch to see if he wanted it working on real hardware and he agreed. We invited na103 to join us and and a collaborative hobby ensured.
-
-Firmware evolved as extra tools were added which led the hardware to evolve too.
-And as the hardware evolved, so did the firmware.
-
-And the healthy vicious circle continued!
-
-DeMoN was born.
+* [Firmware](../README.md#BuildYourOwn_Firmware) 
+* [Cartridge Case](../README.md#BuildYourOwn_Case)
+   
+[Related Projects](../README.md#RelatedProjects)
 
 
-###Features
+<a name="Features"></a>
+## Features
 
 So what is so special about the DeMoN cartridge, and how does it compare against an original Action Replay 3 cartridge?
-Feast your eyes on this table:
+In a nutshell:
 
 | FEATURE | Action Replay 3 | DeMoN Cartridge |
 |---------|----------|----------|
@@ -60,7 +55,9 @@ Other features of the DeMoN cartridge:
 
 For an up-to-date list of current tools and commands, visit https://github.com/dmcoles/ActionReplay5/blob/main/Complete%20Command%20List.txt
 
-#Build Your Own DeMoN Cartridge.
+
+<a name="BuildYourOwn"></a>
+## Build Your Own DeMoN Cartridge.
 
 If you want to build your own then you will need the following:
 * Soldering Iron
@@ -81,7 +78,8 @@ To Build the PLCC32 ROM version of the DeMoN, follow this link.
 
 I actually don't need to write any more about how to build one, the rest is quite straight forward.
 
-#Firmware.
+<a name="BuildYourOwn_Firmware"></a>
+### Firmware.
 
 Once built, your cartridge will now need firmware.
 
@@ -90,7 +88,8 @@ Tools are included with instructions in this repo on how to patch an Action Repl
 
 DeMoN uses Action Replay firmware, including modified firmware and homebrews. The latest version of the DeMoN (Action Replay 5) firmware can be found on REbEL's repo that can be found here.
 
-#Cartridge Case.
+<a name="BuildYourOwn_Case"></a>
+### Cartridge Case.
 The case:
 
 ![image](https://github.com/user-attachments/assets/ff7e556c-8815-498d-aae7-fc6ca6019e7b) 
@@ -106,10 +105,11 @@ blah
 https://www.printables.com/model/1037033-amiga-action-replay-3-replica-case
 
 
-#Related Projects.
+<a name="RelatedProjects"></a>
+## Related Projects.
 
-REbEL, the author of the DeMoN firmware has an open project (Action Replay 5) that can be found here. This repo contains firmware that can be used in WinUAE as well as DeMoN. These will be up-to-date and more stable, including source code. His main github page can be found here.
+**REbEL**, the author of the DeMoN firmware has an open project (Action Replay 5) that can be found here. This repo contains firmware that can be used in WinUAE as well as DeMoN. These will be up-to-date and more stable, including source code. His main github page can be found here.
 
-Na103, who reverse engineered the Action Replay 3, has posted his project here. This repo contains several versions of the Action Replay 3 for different ROM footprints. His main github page can be found here.
+**Na103**, who reverse engineered the Action Replay 3, has posted his project here. This repo contains several versions of the Action Replay 3 for different ROM footprints. His main github page can be found here.
 
 DeMoN Case: TODO
