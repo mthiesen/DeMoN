@@ -10,9 +10,9 @@ This project will give a brief introduction about DeMoN, how it came to be, its 
 
 ## Contents
 
-[A Brief History](https://github.com/gerbilbyte/DeMoN/main/README.md#a-brief-history) (the boring bit. In fact, it's so boring it can be put on another page altogether).
+[A Brief History](https://github.com/gerbilbyte/DeMoN/blob/main/README.md#a-brief-history) (the boring bit. In fact, it's so boring it can be put on another page altogether).
 
-[DeMoN features](../README.md#Features)
+[DeMoN features](https://github.com/gerbilbyte/DeMoN/blob/main/README.md#features)
 
 [Build Your Own](../README.md#[BuildYourOwn](../README.md#build-your-own-demon-cartridge))
 
