@@ -97,7 +97,7 @@ Follow this link to build the PLCC32 ROM version of DeMoN](https://github.com/ge
 I actually don't need to write any more about how to build one, the rest is quite straight forward.
 
 
-### * Firmware.
+### Firmware.
 
 Once built, your cartridge will now need firmware.
 
@@ -107,7 +107,7 @@ Tools are included with instructions in this repo on how to patch an Action Repl
 DeMoN uses Action Replay firmware, including modified firmware and homebrews. The latest version of the DeMoN (Action Replay 5) firmware can be found on REbEL's repo that can be found [here](https://github.com/dmcoles/ActionReplay5).
 
 
-### * Cartridge Case.
+### Cartridge Case.
 The case:
 
 ![image](https://github.com/user-attachments/assets/ff7e556c-8815-498d-aae7-fc6ca6019e7b) 
