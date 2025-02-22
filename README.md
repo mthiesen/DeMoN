@@ -14,12 +14,12 @@ This project will give a brief introduction about DeMoN, how it came to be, its 
 
 [DeMoN features](https://github.com/gerbilbyte/DeMoN/blob/main/README.md#features)
 
-[Build Your Own](https://github.com/gerbilbyte/DeMoN/blob/main/README.md#build-your-own)
+[Build Your Own](https://github.com/gerbilbyte/DeMoN/blob/main/README.md#build-your-own-demon-cartridge)
 
 * [Firmware](https://github.com/gerbilbyte/DeMoN/blob/main/README.md#firmware) 
 * [Cartridge Case](https://github.com/gerbilbyte/DeMoN/blob/main/README.md#cartridge-case)
    
-[Related Projects](https://github.com/gerbilbyte/DeMoN/blob/main/README.md#related-pprojects)
+[Related Projects](https://github.com/gerbilbyte/DeMoN/blob/main/README.md#related-projects)
 
 
 
