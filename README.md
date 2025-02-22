@@ -10,7 +10,7 @@ This project will give a brief introduction about DeMoN, how it came to be, its 
 
 ## Contents
 
-[A Brief History](../history) (the boring bit. In fact, it's so boring it can be put on another page altogether).
+[A Brief History](https://github.com/gerbilbyte/DeMoN/main/README.md#a-brief-history) (the boring bit. In fact, it's so boring it can be put on another page altogether).
 
 [DeMoN features](../README.md#Features)
 
@@ -21,6 +21,24 @@ This project will give a brief introduction about DeMoN, how it came to be, its 
    
 [Related Projects](../README.md#RelatedProjects)
 
+
+## A Brief History
+
+In a nutshell...
+
+Since the 1990s I've been a massive fan of the Action Replay III cartridge (AR3) for the Amiga. Whenever I played games on the Amiga, the AR3 was always plugged in, and I had more fun finding infinite lives, infinite weapons, level skips, etc. I learnt so much from that device as well as other ways to use it. I wanted to have an AR3 with my own tools, but this was an impossibility for me at the time.
+
+Fast forward a few years....
+
+I learnt about a project where somebody (na103) had reverse engineered the original AR3 cartridge. The project can be found here. I built my own, reverse engineered the firmware, added my tool and the project was a success.
+
+Shortly after this I learnt that another individual (REbEL) had reverse engineered the Action Replay III firmware, the Aktion Replay IV "firmware", and combined all the tools together into a ROM binary that worked as a "cartridge" for WinUAE (known as the Action Replay V). I got in touch to see if he wanted it working on real hardware and he agreed. We invited na103 to join us and and a collaborative hobby ensured.
+
+Firmware evolved as extra tools were added which led the hardware to evolve too. And as the hardware evolved, so did the firmware.
+
+And the healthy vicious circle continued!
+
+DeMoN was born.
 
 <a name="Features"></a>
 ## Features
