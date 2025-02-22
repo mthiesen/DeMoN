@@ -10,16 +10,17 @@ This project will give a brief introduction about DeMoN, how it came to be, its 
 
 ## Contents
 
-[A Brief History](https://github.com/gerbilbyte/DeMoN/blob/main/README.md#a-brief-history) (the boring bit. In fact, it's so boring it can be put on another page altogether).
+[A Brief History](https://github.com/gerbilbyte/DeMoN/blob/main/README.md#a-brief-history) (the boring bit. In fact, skip over this bit).
 
 [DeMoN features](https://github.com/gerbilbyte/DeMoN/blob/main/README.md#features)
 
-[Build Your Own](../README.md#[BuildYourOwn](../README.md#build-your-own-demon-cartridge))
+[Build Your Own](https://github.com/gerbilbyte/DeMoN/blob/main/README.md#build-your-own)
 
-* [Firmware](../README.md#BuildYourOwn_Firmware) 
-* [Cartridge Case](../README.md#BuildYourOwn_Case)
+* [Firmware](https://github.com/gerbilbyte/DeMoN/blob/main/README.md#firmware) 
+* [Cartridge Case](https://github.com/gerbilbyte/DeMoN/blob/main/README.md#cartridge-case)
    
-[Related Projects](../README.md#RelatedProjects)
+[Related Projects](https://github.com/gerbilbyte/DeMoN/blob/main/README.md#related-pprojects)
+
 
 
 ## A Brief History
@@ -40,7 +41,7 @@ And the healthy vicious circle continued!
 
 DeMoN was born.
 
-<a name="Features"></a>
+
 ## Features
 
 So what is so special about the DeMoN cartridge, and how does it compare against an original Action Replay 3 cartridge?
@@ -74,7 +75,6 @@ Other features of the DeMoN cartridge:
 For an up-to-date list of current tools and commands, visit https://github.com/dmcoles/ActionReplay5/blob/main/Complete%20Command%20List.txt
 
 
-<a name="BuildYourOwn"></a>
 ## Build Your Own DeMoN Cartridge.
 
 If you want to build your own then you will need the following:
@@ -96,7 +96,7 @@ To Build the PLCC32 ROM version of the DeMoN, follow this link.
 
 I actually don't need to write any more about how to build one, the rest is quite straight forward.
 
-<a name="BuildYourOwn_Firmware"></a>
+
 ### Firmware.
 
 Once built, your cartridge will now need firmware.
@@ -106,7 +106,7 @@ Tools are included with instructions in this repo on how to patch an Action Repl
 
 DeMoN uses Action Replay firmware, including modified firmware and homebrews. The latest version of the DeMoN (Action Replay 5) firmware can be found on REbEL's repo that can be found here.
 
-<a name="BuildYourOwn_Case"></a>
+
 ### Cartridge Case.
 The case:
 
@@ -123,7 +123,6 @@ blah
 https://www.printables.com/model/1037033-amiga-action-replay-3-replica-case
 
 
-<a name="RelatedProjects"></a>
 ## Related Projects.
 
 **REbEL**, the author of the DeMoN firmware has an open project (Action Replay 5) that can be found here. This repo contains firmware that can be used in WinUAE as well as DeMoN. These will be up-to-date and more stable, including source code. His main github page can be found here.
