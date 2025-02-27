@@ -30,7 +30,6 @@ i1 i2 i3
 
 Equations:
 
-NOT USED
 /o13 = /o15 +
        i5 & /o13
 o13.oe = vcc
